@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <body>
+    <h2>Student List</h2>
+    <ul>
+    {% for student in students %}
+      <li>{{ student.name }} : {{ student.university }}</li>
+    {% endfor %}
+    </ul>
+
+    <hr>
+
+    <form action="/" method="post">
+      <div>Name: <input name="name"></input></div>
+      <div>University: <input name="univ"></input></div>
+      <div><input type="submit" value="Add Student"></div>
+    </form>
+  </body>
+</html>
+{% endautoescape %}
