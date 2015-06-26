@@ -1,4 +1,4 @@
-application: python-database-intro-lab
+application: python-database-posts-lab
 version: 1
 runtime: python27
 api_version: 1
