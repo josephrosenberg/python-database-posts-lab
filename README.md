@@ -12,7 +12,8 @@ This lab will help you create your own Blog backend! After this lab you will be 
 
 ## Directions
 
-
+1. Fill in the `Post(ndb.Model)` with a `StringProperty` for a title, a `TextProperty` for the content, and a `DateTimeProperty` that automatically records the date the record was created.
+2.
 
 
 ## Stretch
