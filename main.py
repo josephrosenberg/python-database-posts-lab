@@ -35,9 +35,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 # Define a Student model for the Datastore
 class Post(ndb.Model):
-    title = ndb.StringProperty(required=True)
-    content = ndb.TextProperty(required=True)
-    date = ndb.DateTimeProperty(auto_now_add=True)
+
 
 
 class MainHandler(webapp2.RequestHandler):
