@@ -35,7 +35,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 # Define a Student model for the Datastore
 class Post(ndb.Model):
-    name = ndb.StringProperty(required=True)
+    title = ndb.StringProperty(required=True)
     content = ndb.TextProperty(required=True)
     date = ndb.DateTimeProperty(auto_now_add=True)
 
@@ -53,11 +53,11 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(template.render(template_values))
 
     def post(self):
-        # Get the student name and university from the form
-        name = self.request.get('name')
+        # Get the post title and content from the form
+        title = self.request.get('title')
         content = self.request.get('content')
         # Create a new Student and put it in the datastore
-        post = Post(name=name, content=content)
+        post = Post(title=title, content=content)
         post.put()
         # Redirect to the main handler that will render the template
         self.redirect('/')
