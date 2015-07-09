@@ -41,22 +41,19 @@ class Post(ndb.Model):
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         # Get all of the student data from the datastore
-        query = Post.query()
-        post_data = query.fetch()
+
         # Pass the data to the template
         template_values = {
-            'posts' : post_data
+            # We want to give the template all of our posts data
         }
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render(template_values))
 
     def post(self):
         # Get the post title and content from the form
-        title = self.request.get('title')
-        content = self.request.get('content')
+
         # Create a new Student and put it in the datastore
-        post = Post(title=title, content=content)
-        post.put()
+
         # Redirect to the main handler that will render the template
         self.redirect('/')
 

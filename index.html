@@ -3,16 +3,12 @@
 <html>
   <body>
     <h2>Posts</h2>
-    {% for post in posts %}
-      <h3>{{ post.title }}</h3>
-      <h5>{{ post.date.strftime("%d/%m/%y") }}</h5>
-      <p>{{ post.content }}</p>
-      <hr>
-    {% endfor %}
+    <!-- A 'for _ in _ ' loop would be great here to to through and display the posts  -->
 
-    <form action="/" method="post">
-      <div>Title: <input name="title"></input></div>
-      <div>Post: <div><textarea name="content" rows="3" cols="60"></textarea></div></div>
+    <!-- The Action should sent to '/' and use the method 'post'  -->
+    <form action="" method="">
+      <div><input name=""></input></div>
+      <div><textarea name="" rows="3" cols="60"></textarea></div>
       <div><input type="submit" value="Add Post"></div>
     </form>
   </body>
